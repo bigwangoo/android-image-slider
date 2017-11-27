@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="slider_AndroidImageSlider_Corner_Oval_Orange">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:gravity">center</item>
+        <item name="android:background">@drawable/slider_indicator_corner_bg</item>
+        <item name="android:paddingLeft">2dp</item>
+        <item name="android:paddingRight">2dp</item>
+        <item name="slider_shape">oval</item>
+        <item name="slider_padding_left">3dp</item>
+        <item name="slider_padding_right">3dp</item>
+        <item name="slider_padding_top">4dp</item>
+        <item name="slider_padding_bottom">4dp</item>
+
+        <item name="slider_selected_color">#f60</item>
+        <item name="slider_unselected_color">#ffffff</item>
+        <item name="slider_selected_width">6dp</item>
+        <item name="slider_selected_height">6dp</item>
+        <item name="slider_unselected_width">6dp</item>
+        <item name="slider_unselected_height">6dp</item>
+    </style>
+
+    <style name="slider_AndroidImageSlider_Attractive_Rect_Blue">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:gravity">center</item>
+        <item name="android:paddingLeft">2dp</item>
+        <item name="android:paddingRight">2dp</item>
+        <item name="slider_shape">rect</item>
+        <item name="slider_padding_left">3dp</item>
+        <item name="slider_padding_right">3dp</item>
+        <item name="slider_padding_top">4dp</item>
+        <item name="slider_padding_bottom">4dp</item>
+
+        <item name="slider_selected_color">#30CCE5</item>
+        <item name="slider_unselected_color">#333333</item>
+        <item name="slider_selected_width">13dp</item>
+        <item name="slider_selected_height">4dp</item>
+        <item name="slider_unselected_width">13dp</item>
+        <item name="slider_unselected_height">4dp</item>
+    </style>
+
+    <style name="slider_AndroidImageSlider_Magnifier_Oval_Black">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:gravity">center</item>
+        <item name="android:paddingLeft">2dp</item>
+        <item name="android:paddingRight">2dp</item>
+        <item name="slider_shape">oval</item>
+        <item name="slider_padding_left">3dp</item>
+        <item name="slider_padding_right">3dp</item>
+        <item name="slider_padding_top">4dp</item>
+        <item name="slider_padding_bottom">4dp</item>
+
+        <item name="slider_selected_color">#333333</item>
+        <item name="slider_unselected_color">#33000000</item>
+        <item name="slider_selected_width">8dp</item>
+        <item name="slider_selected_height">8dp</item>
+        <item name="slider_unselected_width">6dp</item>
+        <item name="slider_unselected_height">6dp</item>
+    </style>
+
+</resources>
