@@ -1,30 +1,31 @@
 apply plugin: 'com.android.library'
 
 android {
-    compileSdkVersion 26
-    defaultConfig {
-        minSdkVersion 16
-        targetSdkVersion 26
-        versionCode 1
-        versionName "1.0.0"
 
+    compileSdkVersion rootProject.ext.versions['compileSdkVersion']
+    buildToolsVersion rootProject.ext.versions['buildToolsVersion']
+
+    defaultConfig {
+        minSdkVersion rootProject.ext.versions['minSdkVersion']
+        targetSdkVersion rootProject.ext.versions['targetSdkVersion']
+        versionCode 1
+        versionName "1.0"
     }
     lintOptions {
         // abortOnError false
     }
     compileOptions {
-        sourceCompatibility JavaVersion.VERSION_1_8
-        targetCompatibility JavaVersion.VERSION_1_8
+        sourceCompatibility JavaVersion.VERSION_1_7
+        targetCompatibility JavaVersion.VERSION_1_7
     }
     resourcePrefix 'slider_'
 }
 
 dependencies {
-    implementation fileTree(dir: 'libs', include: ['*.jar'])
-
-    implementation 'com.android.support:appcompat-v7:26.1.0'
-    implementation 'com.android.support:support-v4:26.1.0'
-    implementation 'com.squareup.picasso:picasso:2.5.2'
+    compile fileTree(dir: 'libs', include: ['*.jar'])
+    compile rootProject.ext.dependencies["support-v4"]
+    compile rootProject.ext.dependencies["appcompat-v7"]
+    compile rootProject.ext.dependencies["picasso"]
 }
 
-apply from: "../maven.gradle"
+//apply from: "../maven.gradle"

@@ -152,7 +152,7 @@ public class SliderLayout extends RelativeLayout {
         mSliderAdapter = new SliderAdapter(mContext);
         PagerAdapter wrappedAdapter = new InfinitePagerAdapter(mSliderAdapter);
 
-        mViewPager = findViewById(R.id.daimajia_slider_viewpager);
+        mViewPager = (InfiniteViewPager) findViewById(R.id.daimajia_slider_viewpager);
         mViewPager.setAdapter(wrappedAdapter);
 
         mViewPager.setOnTouchListener(new OnTouchListener() {
