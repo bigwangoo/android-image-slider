@@ -1,7 +1,6 @@
 package com.tianxiabuyi.slider.SliderTypes;
 
 import android.content.Context;
-import android.text.TextUtils;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.widget.ImageView;
@@ -14,9 +13,6 @@ import com.tianxiabuyi.slider.R;
  */
 public class TextSliderView extends BaseSliderView {
 
-    private ImageView mIvSlide;
-    private TextView mTvTitle;
-
     public TextSliderView(Context context) {
         super(context);
     }
@@ -24,20 +20,10 @@ public class TextSliderView extends BaseSliderView {
     @Override
     public View getView() {
         View v = LayoutInflater.from(getContext()).inflate(R.layout.slider_render_type_text, null);
-        mIvSlide = (ImageView) v.findViewById(R.id.daimajia_slider_image);
-        mTvTitle = (TextView) v.findViewById(R.id.description);
-        mTvTitle.setMaxLines(1);
-        mTvTitle.setEllipsize(TextUtils.TruncateAt.END);
-        mTvTitle.setText(getDescription());
-        bindEventAndShow(v, mIvSlide);
+        ImageView ivSlide = (ImageView) v.findViewById(R.id.daimajia_slider_image);
+        TextView tvDesc = (TextView) v.findViewById(R.id.description);
+        tvDesc.setText(getDescription());
+        bindEventAndShow(v, ivSlide);
         return v;
-    }
-
-    public ImageView getSlideView() {
-        return mIvSlide;
-    }
-
-    public TextView getTitleView() {
-        return mTvTitle;
     }
 }
