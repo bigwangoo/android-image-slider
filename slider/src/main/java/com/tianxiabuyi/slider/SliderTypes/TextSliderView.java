@@ -12,6 +12,10 @@ import com.tianxiabuyi.slider.R;
  * This is a slider with a description TextView.
  */
 public class TextSliderView extends BaseSliderView {
+
+    private ImageView mIvSlide;
+    private TextView mTvTitle;
+
     public TextSliderView(Context context) {
         super(context);
     }
@@ -19,10 +23,18 @@ public class TextSliderView extends BaseSliderView {
     @Override
     public View getView() {
         View v = LayoutInflater.from(getContext()).inflate(R.layout.slider_render_type_text, null);
-        ImageView target = (ImageView) v.findViewById(R.id.daimajia_slider_image);
-        TextView description = (TextView) v.findViewById(R.id.description);
-        description.setText(getDescription());
-        bindEventAndShow(v, target);
+        mIvSlide = (ImageView) v.findViewById(R.id.daimajia_slider_image);
+        mTvTitle = (TextView) v.findViewById(R.id.description);
+        mTvTitle.setText(getDescription());
+        bindEventAndShow(v, mIvSlide);
         return v;
+    }
+
+    public ImageView getSlideView() {
+        return mIvSlide;
+    }
+
+    public TextView getTitleView() {
+        return mTvTitle;
     }
 }
