@@ -1,12 +1,14 @@
 apply plugin: 'com.github.dcendents.android-maven'
 apply plugin: 'com.jfrog.bintray'
 
-def siteUrl = 'https://github.com/bigwangoo/android_imageslider'
-def gitUrl = 'https://github.com/bigwangoo/android_imageslider.git'
+
 def libName = "slider"
 group = "com.tianxiabuyi"
-version = "1.0.0"
-// 上面配置后上传至JCenter后的编译路径是这样的： compile 'com.xxx.libName:library:1.0.0'
+version = "1.0.1"
+// sample compile 'com.xxx.libName:library:1.0.0'
+
+def siteUrl = 'https://github.com/bigwangoo/android_imageslider'
+def gitUrl = 'https://github.com/bigwangoo/android_imageslider.git'
 
 task sourcesJar(type: Jar) {
     from android.sourceSets.main.java.srcDirs
@@ -24,13 +26,14 @@ task copyDoc(type: Copy) {
     from "${buildDir}/docs/"
     into "docs"
 }
-// 上传到JCenter所需要的源码文件
+
+// 上传的源码文件
 artifacts {
     archives javadocJar
     archives sourcesJar
 }
 
-// 配置maven库，生成POM.xml文件
+// 配置maven库, 生成POM.xml文件
 install {
     repositories.mavenInstaller {
         pom {
@@ -82,3 +85,7 @@ bintray {
         publish = true
     }
 }
+
+// 运行上传
+// gradlew install
+// gradlew bintrayUpload

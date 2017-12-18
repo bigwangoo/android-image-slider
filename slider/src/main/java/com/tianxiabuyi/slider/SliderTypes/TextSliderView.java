@@ -1,6 +1,7 @@
 package com.tianxiabuyi.slider.SliderTypes;
 
 import android.content.Context;
+import android.text.TextUtils;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.widget.ImageView;
@@ -25,6 +26,8 @@ public class TextSliderView extends BaseSliderView {
         View v = LayoutInflater.from(getContext()).inflate(R.layout.slider_render_type_text, null);
         mIvSlide = (ImageView) v.findViewById(R.id.daimajia_slider_image);
         mTvTitle = (TextView) v.findViewById(R.id.description);
+        mTvTitle.setMaxLines(1);
+        mTvTitle.setEllipsize(TextUtils.TruncateAt.END);
         mTvTitle.setText(getDescription());
         bindEventAndShow(v, mIvSlide);
         return v;

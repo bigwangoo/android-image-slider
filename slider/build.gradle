@@ -28,4 +28,4 @@ dependencies {
     compile rootProject.ext.dependencies["picasso"]
 }
 
-//apply from: "../maven.gradle"
+apply from: "../maven.gradle"
